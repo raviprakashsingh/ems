@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7) + 1,
     overflowX: 'hidden',
   },
+  noPaddingTop: {
+    paddingTop: 0,
+  },
 }));
 
 export default function Menu() {
@@ -59,9 +62,9 @@ export default function Menu() {
         }}
       >
         <div className={classes.toolbar}></div>
-        <List>
-          <ListItem button>
-            <ListItemIcon onClick={() => setOpen(!open)}>
+        <List className={classes.noPaddingTop}>
+          <ListItem button onClick={() => setOpen(!open)}>
+            <ListItemIcon>
               <MenuIcon />
             </ListItemIcon>
           </ListItem>

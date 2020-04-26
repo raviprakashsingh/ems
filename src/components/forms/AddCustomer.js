@@ -8,6 +8,8 @@ import {
   Switch,
   Divider,
   TextField,
+  FormControl,
+  InputLabel,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   fixMargin: {
     marginLeft: theme.spacing(7) + 1,
   },
-  paper: { padding: theme.spacing(3) },
+  paper: { padding: theme.spacing(3), marginTop: theme.spacing(2) },
   space2: { marginTop: theme.spacing(2) },
   space1: { marginTop: theme.spacing(1) },
   test: {},
@@ -27,8 +29,8 @@ export default function AddCustomer() {
     <div className={classes.fixMargin}>
       <div className={classes.toolbar}></div>
       <Grid container direction='row' justify='center' alignItems='flex-start'>
-        <Grid item xs={5}>
-          <Paper className={classes.paper}>
+        <Grid item xs={8}>
+          <Paper elevation={3} className={classes.paper}>
             <Typography variant='h3'>Add Customer</Typography>
             <Divider />
             <Grid container className={classes.space2}>
